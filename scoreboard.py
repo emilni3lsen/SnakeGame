@@ -12,7 +12,7 @@ class Scoreboard(Turtle):
         super().__init__(shape, undobuffersize, visible)
         self.score = 0
         try:
-            with open("/Users/EmilNielsen/Desktop/Programming/pythonfiles/100days/day20and21/snake_game/highscore.txt", "r") as file:
+            with open("highscore.txt", "r") as file:
                 self.highscore = int(file.read())
         except:
             self.highscore = 0
@@ -37,7 +37,7 @@ class Scoreboard(Turtle):
         
         if self.score > self.highscore:
             self.highscore = self.score
-            with open("/Users/EmilNielsen/Desktop/Programming/pythonfiles/100days/day20and21/snake_game/highscore.txt", "w") as file:
+            with open("highscore.txt", "w") as file:
                 file.write(str(self.highscore))
                 
         self.setpos(230, 288)
