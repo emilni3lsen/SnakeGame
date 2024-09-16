@@ -2,4 +2,4 @@
 *.txt
 
 # Ignore pycache files
-*.pyc
+/_pycache/
